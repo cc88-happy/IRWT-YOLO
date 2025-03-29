@@ -10,7 +10,7 @@ from pathlib import Path
 import torch
 import torch.nn as nn
 
-from ultralytics.nn.Addmodules.HCFNet import *
+from ultralytics.nn.Addmodules.DCPPA import *
 from ultralytics.nn.Addmodules.FFCAYOLO import *
 from ultralytics.nn.Addmodules.SPDConv import *
 from ultralytics.nn.Addmodules.Biformer import *
@@ -1018,13 +1018,13 @@ def parse_model(d, ch, verbose=True):  # model_dict, input_channels(3)
             PSA,
             SCDown,
             C2fCIB,
-            # 新加
+            
             nn.Conv2d,
             iRMB,
             C2f_CBAM,
             C2f_SE,
             C2f_CA,
-            PPA,
+            DCPPA,
             C2f_MDCR,
             C2f_Faster,
             C3_Faster,
