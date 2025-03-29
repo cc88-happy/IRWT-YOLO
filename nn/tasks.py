@@ -1077,7 +1077,7 @@ def parse_model(d, ch, verbose=True):  # model_dict, input_channels(3)
             c2 = args[1] if args[3] else args[1] * 4
         elif m is nn.BatchNorm2d:
             args = [ch[f]]
-        # 新加
+        
         elif m is ASFF2:
             c1, c2 = [ch[f[0]], ch[f[1]]], args[0]
             c2 = make_divisible(min(c2, max_channels) * width, 8)
@@ -1113,7 +1113,7 @@ def parse_model(d, ch, verbose=True):  # model_dict, input_channels(3)
         # 新加
         elif m in [BiFPN_Add2, BiFPN_Add3]:
             c2 = max([ch[x] for x in f])
-            ######  FFCA-YOLO
+
         elif m is SCAM:
             c2 = ch[f]
             args = [c2]
