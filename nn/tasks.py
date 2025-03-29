@@ -12,11 +12,6 @@ import torch.nn as nn
 
 from ultralytics.nn.Addmodules.DCPPA import *
 from ultralytics.nn.Addmodules.FFCAYOLO import *
-from ultralytics.nn.Addmodules.SPDConv import *
-from ultralytics.nn.Addmodules.Biformer import *
-from ultralytics.nn.Addmodules.MyModule import *
-from ultralytics.nn.Addmodules.CFPNet import *
-from ultralytics.nn.Addmodules.MetaNeXtStage import *
 from ultralytics.nn.Addmodules.RCS import *
 
 from ultralytics.nn.modules import (
